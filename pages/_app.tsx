@@ -1,7 +1,9 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Navigation } from '../components/Navigation/Navigation';
-import '../styles/globals.css'
+import { ToastContainer, Flip } from 'react-toastify';
+import '../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyle = createUseStyles({
     containerWrapper: {
@@ -29,6 +31,7 @@ function MyApp({ Component, pageProps }) {
                     <Component {...pageProps} />
                 </div>
             </div>
+            <ToastContainer transition={Flip} position='bottom-right' />
         </div>
     );
 }
